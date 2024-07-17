@@ -4,7 +4,7 @@ module circuitod(
     input logic b, 
     input logic c, 
     //definindo as saídas 
-    output logic x
+    output logic x,
     output logic y  
 );
     //definindo a saída x 
