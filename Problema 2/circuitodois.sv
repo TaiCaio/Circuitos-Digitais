@@ -15,6 +15,4 @@ module circuitodois(
     assign w4 = ~w3;
     //definindo a expressão lógica da saída
     assign x = (w4 & b & c);
-
-
 endmodule
