@@ -80,6 +80,30 @@ r1
 !i113 1
 R6
 R7
+vcircuitocinco
+R0
+!s110 1722361259
+!i10b 1
+!s100 92mY=YnWVCVEV<U@MB9?01
+Il^dCKNWbYV9HA;lhjK>1[0
+R2
+!s105 circuitocinco_sv_unit
+S1
+R3
+w1722361168
+8C:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 5/circuitocinco.sv
+FC:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 5/circuitocinco.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1722361259.000000
+!s107 C:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 5/circuitocinco.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 5/circuitocinco.sv|
+!i113 1
+R6
+R7
 vcircuitod
 R0
 R1
@@ -101,6 +125,102 @@ r1
 R5
 !s107 C:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 1/circuitod.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 1/circuitod.sv|
+!i113 1
+R6
+R7
+vcircuitodois1
+R0
+!s110 1721771345
+!i10b 1
+!s100 enXM<6mTUh>_ckg8?ZMJk2
+I<e7?na1L5M_m9_ihXCT>]0
+R2
+!s105 circuitodois1_sv_unit
+S1
+R3
+w1721771310
+8C:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 2/circuitodois1.sv
+FC:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 2/circuitodois1.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1721771345.000000
+!s107 C:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 2/circuitodois1.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 2/circuitodois1.sv|
+!i113 1
+R6
+R7
+vcircuitodois2
+R0
+!s110 1722357747
+!i10b 1
+!s100 h0IH]XUVe;Q5jMAL=iCh52
+IDFDOkIdb4Bo_f2Ii7eEjJ3
+R2
+!s105 circuitodois2_sv_unit
+S1
+R3
+w1722357706
+8C:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 2/circuitodois2.sv
+FC:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 2/circuitodois2.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1722357747.000000
+!s107 C:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 2/circuitodois2.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 2/circuitodois2.sv|
+!i113 1
+R6
+R7
+vcircuitoquatro
+R0
+!s110 1722357816
+!i10b 1
+!s100 9:V6FVBFi>eh>^4aCOhzK0
+IjD;b0mX8Uf_n<PB?7^Ig;0
+R2
+!s105 circuitoquatro_sv_unit
+S1
+R3
+w1722357804
+8C:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 4/circuitoquatro.sv
+FC:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 4/circuitoquatro.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1722357816.000000
+!s107 C:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 4/circuitoquatro.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 4/circuitoquatro.sv|
+!i113 1
+R6
+R7
+vcircuitotres
+R0
+!s110 1722273031
+!i10b 1
+!s100 =g=D>2BXc[V^V<VcLG7EH1
+Ib3oWjMAoHDj:N2W1GY7Gn0
+R2
+!s105 circuitotres_sv_unit
+S1
+R3
+w1722273020
+8C:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 3/circuitotres.sv
+FC:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 3/circuitotres.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1722273030.000000
+!s107 C:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 3/circuitotres.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Lenovo/Desktop/EAD/Cadeiras/Circuitos Digitais/HDL/Projeto 01/Problema 3/circuitotres.sv|
 !i113 1
 R6
 R7
