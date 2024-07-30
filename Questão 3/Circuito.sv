@@ -8,5 +8,5 @@ module Circuito (
 assign logic w1 = ~a;
 assign logic w2 = ~b;
 assign logic w3 = ~d;
-assign logic y = ((w1 | w2) & (w2 | w3) & (a | c | w3));
+assign logic y = ((w1 & w2) | (w2 & w3) | (a & c & w3));
 endmodule
