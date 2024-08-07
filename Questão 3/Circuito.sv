@@ -5,8 +5,8 @@ module Circuito (
     output logic y
 );
     logic w1, w2, w3;
-assign logic w1 = ~a;
-assign logic w2 = ~b;
-assign logic w3 = ~d;
-assign logic y = ((w1 & w2) | (w2 & w3) | (a & c & w3));
+    assign w1 = ~a;
+    assign w2 = ~b;
+    assign w3 = ~d;
+assign y = ((w1 & w2) | (w2 & w3) | (a & c & w3));
 endmodule
