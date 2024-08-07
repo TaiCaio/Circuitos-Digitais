@@ -210,7 +210,7 @@ Simule o circuito no ModelSim para todas as possíveis combinações de entrada 
 A primeira coisa a se fazer será atribuir os sinais (também chamados de *signals* e *wires*)
 
 > Circuitodois1 com *wires*
-![Circuitodois1 com wires]()
+![Circuitodois1 com wires](~~~ logic w1, w2, w3, w4)
 - Descrição no *System Verilog*
 ~~~
 module circuitodois1(
