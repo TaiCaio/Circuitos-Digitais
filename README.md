@@ -234,12 +234,41 @@ endmodule
 ~~~
 > Circuitodois2 com *wires*
 ![Circuitodois2 com wires]()
+- Descrição no *System Verilog*
+~~~
+module circuitodois2(
+    //definindo as entradas
+    input logic a,
+    input logic b,
+    input logic c,
+    input logic d, 
+    //definindo as saídas
+    output logic x, 
+    //definindo os wires
+    w1, w2, w3, w4, w5, w6
+);
+    //definindo as expressões lógicas dos wires
+    assign w1 = ~a;
+    assign w2 = ~b;
+    assign w3 = ~c;
+    assign w4 = w1 & w2 & w3;
+    assign w5 = (~w1) & w2 & w3;
+    assign w6 = w1 & w2 & d;  
+    //definindo a expressão lógica da saída 
+    assign x = w4 | w5 | w6; 
+endmodule 
+~~~
 
 # Problema 03
 Utilizando os operadores lógicos, descreva um circuito em SystemVerilog que possua a seguinte tabela
 da verdade:
 
 Simule o circuito no ModelSim para todas as possíveis combinações de entrada e verifique a saída.
+
+- Descrevendo em *System Verilog*
+~~~
+
+~~~
 
 # Problema 04 
 Um sistema de ar condicionado deverá atuar sob as seguintes premissas:

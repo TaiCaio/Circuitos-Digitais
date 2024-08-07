@@ -14,7 +14,7 @@ module circuitodois2(
     assign w2 = ~b;
     assign w3 = ~c;
     assign w4 = w1 & w2 & w3;
-    assign w5 = (~w1) & w2 &w3;
+    assign w5 = (~w1) & w2 & w3;
     assign w6 = w1 & w2 & d;  
     //definindo a expressão lógica da saída 
     assign x = w4 | w5 | w6; 
