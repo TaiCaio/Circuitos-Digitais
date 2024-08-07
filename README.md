@@ -210,7 +210,7 @@ Simule o circuito no ModelSim para todas as possíveis combinações de entrada 
 A primeira coisa a se fazer será atribuir os sinais (também chamados de *signals* e *wires*)
 
 > Circuitodois1 com *wires*
-![Circuitodois1 com wires]()
+![Circuitodois1 com wires](Circuitos-Digitais/Projeto 02 - Assets/circuitosdois1comwires.png)
 - Descrição no *System Verilog*
 ~~~
 module circuitodois1(
@@ -267,7 +267,23 @@ Simule o circuito no ModelSim para todas as possíveis combinações de entrada 
 
 - Descrevendo em *System Verilog*
 ~~~
+// Fazendo o mapa de Karnauguh para obtermos a expressão, conseguimos a seguinte expressão y(abcd) = a'b' + b'd' + acd'
 
+module Circuito (
+    //definindo as entradas
+    input logic a, b, c, d,
+    //defininda a saída
+    output logic y
+);
+    //definindo os wrires
+    logic w1, w2, w3;
+    //definindo as expressões lógicas dos wrires
+    assign w1 = ~a;
+    assign w2 = ~b;
+    assign w3 = ~d;
+//definindo a expressão lógica da saída
+assign y = ((w1 & w2) | (w2 & w3) | (a & c & w3));
+endmodule
 ~~~
 
 # Problema 04 
@@ -292,6 +308,21 @@ Para isso, algumas considerações devem ser estabelecidas:
 • 𝑇 = Temperatura acima de 21°C, 𝑇 =Temperatura abaixo de 21°C;
 
 • 𝐹 = Final de semana, 𝐹 =Dia da semana.
+- Descrevendo em *System Verilog*
+~~~
+module circuitoquatro(
+    //definindo entradas
+    input logic h,
+    input logic u,
+    input logic t,
+    input logic f,
+    //definindo saída
+    output logic x
+);
+    //definindo a expressão lógica da saída 
+    assign x = (h & t)|(u & f);
+endmodule
+~~~
 
 
 # Problema 05
@@ -303,3 +334,23 @@ designados por 𝐵2, 𝐵1 e 𝐵0), a seguinte operação matemática:
 Utilizando operadores lógicos, descreva um circuito em SystemVerilog que possua esse funcionamento.
 
 Simule o circuito no ModelSim para todas as possíveis combinações de entrada.
+- Descrevendo em *System Verilog*
+~~~
+module circuitocinco(
+    //definindo os bits de entrada
+    input logic b2,
+    input logic b1,
+    input logic b0,
+    //definindo os bits de saída
+    output logic y3,
+    output logic y2,
+    output logic y1,
+    output logic y0
+);
+    //definindo as expressões lógicas das saídas de cada bit de Y
+    assign y3 = (b2 & b1 & b0);
+    assign y2 = ((~b2)&(~b1)&(~b0)) | (b2&(~b1)&b0) | (b2&b1&(~b0));
+    assign y1 = ((~b2)&(~b1)&b0) | (b2&(~b0));
+    assign y0 = 1;
+endmodule
+~~~
