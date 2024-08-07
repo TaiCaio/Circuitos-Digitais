@@ -231,6 +231,7 @@ module circuitodois1(
     //definindo a expressão lógica da saída
     assign x = (w4 & b & c);
 endmodule
+~~~
 > Circuitodois2 com *wires*
 ![Circuitodois2 com wires]()
 
