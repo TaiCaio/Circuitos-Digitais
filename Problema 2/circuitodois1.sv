@@ -6,7 +6,7 @@ module circuitodois1(
     //definindo as saídas
     output logic x,
     //definindo os wires
-    logic w1, w2, w3, w4
+     w1, w2, w3, w4
 );
     //definindo as expressões lógicas dos wires
     assign w1 = ~a;
