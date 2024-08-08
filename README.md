@@ -210,6 +210,8 @@ Simule o circuito no ModelSim para todas as possíveis combinações de entrada 
 A primeira coisa a se fazer será atribuir os sinais (também chamados de *signals* e *wires*)
 
 > Circuitodois1 com *wires*
+
+
 ![Circuitodois1 com wires](/Circuitos-Digitais/Projeto%2002%20-%20Assets/circuitosdois1comwires.jpg)
 - Descrição no *System Verilog*
 ~~~
