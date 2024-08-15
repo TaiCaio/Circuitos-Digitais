@@ -5,6 +5,14 @@ Projeto direcionado à disciplina de Circuitos Digitais, ministrada pelo Prof Dr
 - Caio Barreto Meyer | [Caio B. Meyer](https://github.com/TaiCaio) 
 - Guilherme Gabriel Saldanha Pereira | [OGuilhermeGabriel](https://github.com/OGuilhermeGabriel)
 
+# Sumário
+
+- [Problema 01](#problema-01)
+- [Problema 02](#problema-02)
+- [Problema 03](#problema-03)
+- [Problema 04](#problema-04)
+- [Problema 05](#problema-05)
+
 # Problema 01 
 Utilizando operadores lógicos, descreva os seguintes circuitos em SystemVerilog com as expressões
 lógicas de saída dadas.
