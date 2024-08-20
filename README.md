@@ -5,6 +5,14 @@ Projeto direcionado à disciplina de Circuitos Digitais, ministrada pelo Prof Dr
 - Caio Barreto Meyer | [Caio B. Meyer](https://github.com/TaiCaio) 
 - Guilherme Gabriel Saldanha Pereira | [OGuilhermeGabriel](https://github.com/OGuilhermeGabriel)
 
+# Sumário
+
+- [Problema 01](#problema-01)
+- [Problema 02](#problema-02)
+- [Problema 03](#problema-03)
+- [Problema 04](#problema-04)
+- [Problema 05](#problema-05)
+
 # Problema 01 
 Utilizando operadores lógicos, descreva os seguintes circuitos em SystemVerilog com as expressões
 lógicas de saída dadas.
@@ -13,7 +21,7 @@ Além disso, simule o circuito no ModelSim para todas as possíveis combinaçõe
 
 ## Problema 01 - Circuito (a)
 `X = A̅B + C`
-- Descrição no *System Verilog*
+- Descrição do circuito lógico
 ~~~
 module circuitoa(
     //definindo as entradas
@@ -53,7 +61,7 @@ Para comprovar a veracidade da tabela verdade, podemos pegar o caso 010 logo aba
 
 ## Problema 01 - Circuito (b)
 `X = (A+B)(B+C̅)`
-- Descrição no *System Verilog*
+- Descrição do circuito lógico
 ~~~
 module circuitob(
     //definindo as entradas
@@ -95,7 +103,7 @@ Para comprovar a veracidade da tabela verdade, podemos pegar o caso 010 logo aba
 
 ## Problema 01 - Circuito (c)
 <span style="text-decoration: overline;">`AB(C+D)`</span>
-- Descrição no *System Verilog*
+- Descrição no circuito lógico
 ~~~
 module circuitoc(
     //definindo as entradas
@@ -197,23 +205,25 @@ Para comprovar a veracidade da tabela verdade, podemos pegar o caso 011 logo aba
 ![P1 circuitod](/Projeto%2001%20-%20Assets/P1%20circuitod%20-%20WAVE.jpg)
 
 # Problema 02
-Utilizando operadores lógicos e sinais intermediários, descreva em SystemVerilog os circuitos com os
-seguintes diagramas lógicos:
+Utilizando operadores lógicos e sinais intermediários, descreva em *SystemVerilog* os circuitos com os seguintes diagramas lógicos:
 
 ### Circuitodois1 
-![P2 circuitodois1](/Projeto%2001%20-%20Assets/Circuitodois1.jpg)
+![P2 circuitodois1](/Projeto%2002%20-%20Assets/Circuitodois1.jpg)
 ### Circuitodois2
-![P2 circuitodois2](/Projeto%2001%20-%20Assets/Circuitodois2.jpg)
+![P2 circuitodois2](/Projeto%2002%20-%20Assets/Circuitodois2.jpg)
 
 Simule o circuito no ModelSim para todas as possíveis combinações de entrada e obtenha a tabela da verdade para cada um dos casos.
 
-A primeira coisa a se fazer será atribuir os sinais (também chamados de *signals* e *wires*)
+## Problema 02 - Circuitodois 1 e Circuitodois 2
 
-> Circuitodois1 com *wires*
+A primeira coisa a se fazer será atribuir os sinais intermediários (também chamados de *signals* e *wires*) para trechos localizados entre as portas lógicas. O intuito de fazer isso é implementar uma boa prática para a descrição do circuito lógico. Uma vez que, a atribução destas variáveis às expressões lógicas irá reduzir drasticamente as linhas de códigos em alguns casos de atribuição por exemplo.
 
+Nesse sentido, os sinais intermediários atribuidos para cada um dos circuitos foram:
 
-![Circuitodois1 com wires](/Circuitos-Digitais/Projeto%2002%20-%20Assets/circuitosdois1comwires.jpg)
-- Descrição no *System Verilog*
+### Circuitodois1 com *wires*
+![Circuitodois1wires](/Projeto%2002%20-%20Assets/Circuitodois1wires.jpg)
+
+- Descrição do circuito lógico
 ~~~
 module circuitodois1(
     //definindo as entradas
@@ -234,9 +244,29 @@ module circuitodois1(
     assign x = (w4 & b & c);
 endmodule
 ~~~
-> Circuitodois2 com *wires*
-![Circuitodois2 com wires]()
-- Descrição no *System Verilog*
+
+- Tabela Verdade Obtida
+
+ *A* | *B* | *C* | *X* | 
+ ----| ----| ----| ----|   
+  0  |  0  |  0  |  0  |   
+  0  |  0  |  1  |  0  |   
+  0  |  1  |  0  |  0  | 
+  0  |  1  |  1  |  0  |
+  1  |  0  |  0  |  0  |   
+  1  |  0  |  1  |  0  |   
+  1  |  1  |  0  |  0  | 
+  1  |  1  |  1  |  1  |
+
+- Simulando no ModelSim
+
+Podemos então utilizar o ModelSim para saber se a tabela verdade obtida é congruente com os resultados obtidos da simulação. Peguemos, por exemplo, a combinação 111 que resulta na saída 1.
+
+![Circuitodois1](/Projeto%2002%20-%20Assets/P2%20circuitodois1.jpg)
+
+### Circuitodois2 com *wires*
+![Circuitodois2wires](/Projeto%2002%20-%20Assets/Circuitodois2wires.jpg)
+- Descrição do circuito lógico
 ~~~
 module circuitodois2(
     //definindo as entradas
@@ -261,25 +291,74 @@ module circuitodois2(
 endmodule 
 ~~~
 
+- Tabela Verdade Obtida
+
+ *A* | *B* | *C* | *D* | *X* | 
+ ----| ----| ----| ----| ----|   
+  0  |  0  |  0  |  0  |  1  |   
+  0  |  0  |  0  |  1  |  1  |   
+  0  |  0  |  1  |  0  |  0  | 
+  0  |  0  |  1  |  1  |  1  |
+  0  |  1  |  0  |  0  |  0  |   
+  0  |  1  |  0  |  1  |  0  |   
+  0  |  1  |  1  |  0  |  0  | 
+  0  |  1  |  1  |  1  |  0  |
+  1  |  0  |  0  |  0  |  1  |   
+  1  |  0  |  0  |  1  |  1  |   
+  1  |  0  |  1  |  0  |  0  | 
+  1  |  0  |  1  |  1  |  0  |
+  1  |  1  |  0  |  0  |  0  |   
+  1  |  1  |  0  |  1  |  0  |   
+  1  |  1  |  1  |  0  |  0  | 
+  1  |  1  |  1  |  1  |  0  |
+
+- Simulando no ModelSim
+
+Podemos então utilizar o ModelSim para saber se a tabela verdade obtida é congruente com os resultados obtidos da simulação. Peguemos, por exemplo, a combinação 1000 que resulta na saída 1.
+
+![Circuitodois2](/Projeto%2002%20-%20Assets/P2%20circuitodois2.jpg)
+
 # Problema 03
-Utilizando os operadores lógicos, descreva um circuito em SystemVerilog que possua a seguinte tabela
-da verdade:
+Utilizando os operadores lógicos, descreva um circuito em *SystemVerilog* que possua a seguinte tabela da verdade:
+
+ *A* | *B* | *C* | *D* | *Y* | 
+ ----| ----| ----| ----| ----|   
+  0  |  0  |  0  |  0  |  1  |   
+  0  |  0  |  0  |  1  |  1  |   
+  0  |  0  |  1  |  0  |  1  | 
+  0  |  0  |  1  |  1  |  1  |
+  0  |  1  |  0  |  0  |  0  |   
+  0  |  1  |  0  |  1  |  0  |   
+  0  |  1  |  1  |  0  |  0  | 
+  0  |  1  |  1  |  1  |  0  |
+  1  |  0  |  0  |  0  |  1  |   
+  1  |  0  |  0  |  1  |  0  |   
+  1  |  0  |  1  |  0  |  1  | 
+  1  |  0  |  1  |  1  |  0  |
+  1  |  1  |  0  |  0  |  0  |   
+  1  |  1  |  0  |  1  |  0  |   
+  1  |  1  |  1  |  0  |  1  | 
+  1  |  1  |  1  |  1  |  0  |
 
 Simule o circuito no ModelSim para todas as possíveis combinações de entrada e verifique a saída.
 
-- Descrevendo em *System Verilog*
+- Obtenção das expressões lógicas
+
+Antes de começar a descrever o circuito lógico, torna-se necessária a obtenção das expressões lógicas que definem a saída *Y*. O meio utilizado para este caso foi aplicando o mapa de Karnaugh.
+
+- Descrição do circuito lógico
 ~~~
 // Fazendo o mapa de Karnauguh para obtermos a expressão, conseguimos a seguinte expressão y(abcd) = a'b' + b'd' + acd'
 
 module Circuito (
     //definindo as entradas
     input logic a, b, c, d,
-    //defininda a saída
+    //definindo a saída
     output logic y
 );
-    //definindo os wrires
+    //definindo os wires
     logic w1, w2, w3;
-    //definindo as expressões lógicas dos wrires
+    //definindo as expressões lógicas dos wires
     assign w1 = ~a;
     assign w2 = ~b;
     assign w3 = ~d;
@@ -287,6 +366,12 @@ module Circuito (
 assign y = ((w1 & w2) | (w2 & w3) | (a & c & w3));
 endmodule
 ~~~
+
+- Simulando no ModelSim
+
+É possível provar que a expressão lógica da saída *Y* tirada do mapa de Karnaugh é verídica por meio de uma simulação, onde a combinações da tabela verdade precisam ser congruentes com os dados obtidos da simulação. Peguemos, por exemplo, a combinação 1101 que resulta na saída 0.
+
+![Circuitotres](/Projeto%2003%20-%20Assets/P3%20circuitotres%20-%20WAVE.jpg)
 
 # Problema 04 
 Um sistema de ar condicionado deverá atuar sob as seguintes premissas:
@@ -310,7 +395,49 @@ Para isso, algumas considerações devem ser estabelecidas:
 • 𝑇 = Temperatura acima de 21°C, 𝑇 =Temperatura abaixo de 21°C;
 
 • 𝐹 = Final de semana, 𝐹 =Dia da semana.
-- Descrevendo em *System Verilog*
+
+Simule o circuito no ModelSim para todas as possíveis combinações de entrada.
+
+- Interpretando as condições
+
+As premissas impostas pelo ar condicionado podem ser consideradas como condições responsáveis por gerar a tabela verdade do circuito lógico desejável. Vale salientar que a sequência significativa das entradas adotada foi *HUTF*
+
+O intuito é encontrar, por meio de tais condições, os *minterms* responsáveis por definir a tabela verdade. Confira à seguir: 
+
+> Temperatura acima de 21°C e estar entre 9:00h e 17:00h. Podemos interpretar tal premissa como *HXTX*. Onde as possíveis combinações para a saída ser 1 serão: 1010, 1011, 1110, 1111.
+
+> Ser fim de semana com umidade relativa do ar acima de 85%. Podemos interpretar tal premissa como *XUXF*. Onde as possíveis combinações para a saída ser 1 serão: 0101, 0111, 1101, 1111.
+
+> Umidade relativa do ar acima de 85%, temperatura acima de 21°C e ser final de semana. Podemos interpretar tal premissa como *XUTF*. Onde as possíveis combinações para a saída ser 1 serão: 0111 e 1111.
+
+> Umidade relativa do ar acima de 85%, temperatura acima de 21°C e estar entre 9:00h e 17:00h. Podemos interpretar tal premissa como *HUTX*. Onde as possíveis combinações para a saída ser 1 serão: 1110 e 1111
+
+- Tabela Verdade Obtida
+
+Tendo isso em mente, é possível implementar a tabela verdade que descreve o circuito lógico sobre as premissas estabelecidas.
+
+ *H* | *U* | *T* | *F* | *X* | 
+ ----| ----| ----| ----| ----|   
+  0  |  0  |  0  |  0  |  0  |   
+  0  |  0  |  0  |  1  |  0  |   
+  0  |  0  |  1  |  0  |  0  | 
+  0  |  0  |  1  |  1  |  0  |
+  0  |  1  |  0  |  0  |  0  |   
+  0  |  1  |  0  |  1  |  1  |   
+  0  |  1  |  1  |  0  |  0  | 
+  0  |  1  |  1  |  1  |  1  |
+  1  |  0  |  0  |  0  |  0  |   
+  1  |  0  |  0  |  1  |  0  |   
+  1  |  0  |  1  |  0  |  1  | 
+  1  |  0  |  1  |  1  |  1  |
+  1  |  1  |  0  |  0  |  0  |   
+  1  |  1  |  0  |  1  |  1  |   
+  1  |  1  |  1  |  0  |  1  | 
+  1  |  1  |  1  |  1  |  1  |
+
+Dessa forma, para obter a expressão lógica que descreve a saída *X*, basta apenas utilizar o mapa de Karnaugh. Sendo a expressão lógica encontrada, implementada à seguir durante a descrição do circuito lógico.
+
+- Descrição do circuito lógico
 ~~~
 module circuitoquatro(
     //definindo entradas
@@ -326,17 +453,55 @@ module circuitoquatro(
 endmodule
 ~~~
 
+- Simulando no ModelSim
+
+É possível provar que a expressão lógica da saída *Y* tirada do mapa de Karnaugh é verídica por meio de uma simulação, onde a combinações da tabela verdade precisam ser congruentes com os dados obtidos da simulação. Peguemos, por exemplo, a combinação 1011 que resulta na saída 1.
+
+![Circuitoquatro](/Projeto%2004%20-%20Assets/P4%20circuitoquatro%20-%20WAVE.jpg)
 
 # Problema 05
-Um circuito lógico combinacional calcula, a partir de uma entrada de 3 bits 𝐵 (cada um dos bits
-designados por 𝐵2, 𝐵1 e 𝐵0), a seguinte operação matemática:
+Um circuito lógico combinacional calcula, a partir de uma entrada de 3 bits 𝐵 (cada um dos bits designados por 𝐵2, 𝐵1 e 𝐵0), a seguinte operação matemática:
 
- Y |2B - 5|
+ *Y = |2B - 5|*
 
 Utilizando operadores lógicos, descreva um circuito em SystemVerilog que possua esse funcionamento.
 
 Simule o circuito no ModelSim para todas as possíveis combinações de entrada.
-- Descrevendo em *System Verilog*
+
+## Problema 05 - Circuitocinco
+
+Para que o circuito lógico tenha esse funcionamento, será necessário criar uma tabela verdade com estes 3 bits, de 0 à 7, captando todas as combinações. Dessa forma, cada linha do conjunto dos 3 bits irá representar um valor *Y* que, somente mais tarde, na tabela verdade, será representado em bits. Montando esta tabela de associação de valores, teremos:
+
+ *B* | *Y = 2B - 5* | 
+ ----| ----|   
+  0  |  5  |   
+  1  |  3  |   
+  2  |  1  | 
+  3  |  1  |
+  4  |  3  |   
+  5  |  5  |   
+  6  |  7  | 
+  7  |  9  |
+
+- Obtendo a tabela verdade
+
+Note que o valores encontrados para *Y* são valores decimais. Estes valores serão representados na tabela verdade por bits e, como há casos onde o valor de *Y* passa de 7, a saída *Y* terá que ser representada por 4 bits: *Y*3, *Y*2, *Y*1, *Y*0. Confira a tabela verdade logo abaixo:
+
+ *B*2 | *B*1 | *B*0 | *Y*3 | *Y*2 | *Y*1 | *Y*0 |  
+ ---- | ---- | ---- | ---- | ---- | ---- | ---- |   
+  0   |  0   |  0   |  0   |   1  |   0  |   1  |
+  0   |  0   |  1   |  0   |   0  |   1  |   1  |
+  0   |  1   |  0   |  0   |   0  |   0  |   1  | 
+  0   |  1   |  1   |  0   |   0  |   0  |   1  | 
+  1   |  0   |  0   |  0   |   0  |   1  |   1  | 
+  1   |  0   |  1   |  0   |   1  |   0  |   1  |
+  1   |  1   |  0   |  0   |   1  |   1  |   1  |
+  1   |  1   |  1   |  1   |   0  |   0  |   1  |
+
+- Descrevendo em *SystemVerilog*
+
+Note que serão descritas 4 saídas para *Y*. As quatro saídas descritas são justamente os bits que representam a saída *Y*, como já mencionado anteriormente.
+
 ~~~
 module circuitocinco(
     //definindo os bits de entrada
@@ -356,3 +521,9 @@ module circuitocinco(
     assign y0 = 1;
 endmodule
 ~~~
+
+- Simulando no ModelSim
+
+Podemos então utilizar o ModelSim para saber se a tabela verdade obtida é congruente com os resultados obtidos da simulação. Peguemos, por exemplo, a combinação de bits da entrada 100 (valor 4) que resulta na combinação de bits da saída 0011 (valor 3).
+
+![Circuitocinco](/Projeto%2005%20-%20Assets/P5%20circuitocinco.jpg)
