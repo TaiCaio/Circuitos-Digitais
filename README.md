@@ -526,4 +526,4 @@ endmodule
 
 Podemos então utilizar o ModelSim para saber se a tabela verdade obtida é congruente com os resultados obtidos da simulação. Peguemos, por exemplo, a combinação de bits da entrada 100 (valor 4) que resulta na combinação de bits da saída 0011 (valor 3).
 
-![Circuitoquatro](/Projeto%2005%20-%20Assets/P5%20circuitocinco.jpg)
+![Circuitocinco](/Projeto%2005%20-%20Assets/P5%20circuitocinco.jpg)
